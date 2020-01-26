@@ -21,15 +21,17 @@ img.profile {
 
 
 .Title {
-  background-color: blue;
+  background-color: #33B2FF;
   text-align: center;
   color: white;
   font-size: 20px;
-  padding: 40px;
+  padding: 30px;
 }
 
 .SearchBar {
-  background-color: white;
+  background-color: black;
+  text-align: center;
+  color: white;
 }
 
 .Map_profile {
@@ -45,12 +47,16 @@ img.profile {
 }
 
 .Profile {
-  background-color: grey;
+  background-color: #33B2FF;
   flex: 50%;
   text-align: center;
 
 }
 
+.Table_Param {
+  overflow-y: scroll;
+  max-height: 250px;
+}
 .Table {
   background-color: lightblue;
 }

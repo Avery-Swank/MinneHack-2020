@@ -1,5 +1,6 @@
 <!DOCTYPE HTML>
 <html>
+<!-- Front Page to our Website for Reporting and Assisting in the Search for Lost Pets -->
   <head>
         <title>Pet Alert, I'm Falling and I Can't Find My Pet!</title>
         <meta charset="UTF-8">
@@ -17,10 +18,9 @@
     <div class="SearchBar">
       <h1> SearchBar </h1>
     </div>
-
+    <!-- Container to allow for 2 columns -->
     <div class="Map_profile">
-
-
+      <!-- Section for Displaying the Map with Markers -->
       <div class="Map" id = "map">
         <h1> Map </h1>
         <script src="FrontEnd.js"></script>
@@ -28,32 +28,35 @@
 &callback=initMap"
     async defer></script>
       </div>
-
+      <!-- Profile Section to display the pet's name and profile description-->
       <div class="Profile">
-        <h1> Profile </h1>
+        <h1> Pet's Name </h1>
         <img src ="https://www.pngkey.com/png/detail/897-8970746_goldy-gopher-goldy-gopher-emoji.png" class = "profile" >
-        <br>
-        <table>
-          <tr>
-            <th> Name </th>
-            <td> Animal Type </td>
-          </tr>
-          <tr>
-            <th> Animal Type </th>
-            <td> DB Stuff </td>
-					</tr>
-          <tr>
-            <th> Date Lost </th>
-            <td> DB Stuff </td>
-					</tr>
-          <tr>
-            <th> Description </th>
-            <td> Very hyper dog we need help finding please I love my dog/pet </td>
-					</tr>
-        </table>
+        <br> <br>
+        <!-- Container class to keep table from getting too large -->
+        <div class = "Table_Param">
+          <table>
+            <tr>
+              <th> Name </th>
+              <td> Name of Pet </td>
+            </tr>
+            <tr>
+              <th> Animal Type </th>
+              <td> DB Stuff </td>
+  					</tr>
+            <tr>
+              <th> Date Lost </th>
+              <td> DB Stuff </td>
+  					</tr>
+            <tr>
+              <th> Description </th>
+              <td> Very hyper dog we need help finding please I love my dog/pet Very hyper dog we need help finding please I love my dog/petVery hyper dog we need help finding please I love my dog/petVery hyper dog we need help finding please I love my dog/petVery hyper dog we need help finding please I love my dog/petVery hyper dog we need help finding please I love my dog/pet</td>
+  					</tr>
+          </table>
+        </div>
       </div>
     </div>
-
+    <!-- Maybe implement this section to display all the lost pets in a table -->
     <div class="Table">
       <h1> Table </h1>
     </div>

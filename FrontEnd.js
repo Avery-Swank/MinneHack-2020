@@ -1,40 +1,73 @@
 var map;
 
-//Creates the map
+//Creates the map and place markers on map for now
 function initMap() {
-  			var placeOne = {lat: 44.9741, lng: -93.2354};
-  			var placeTwo = {lat: 44.9731, lng: -93.2364};
-  			var placeThree = {lat: 44.9731, lng: -93.2344};
-  			var placeFour = {lat: 44.9721, lng: -93.2354};
+		var placeOne = {lat: 44.9741, lng: -93.2354};
+		var placeTwo = {lat: 44.9731, lng: -93.2364};
+		var placeThree = {lat: 44.9731, lng: -93.2344};
+		var placeFour = {lat: 44.9721, lng: -93.2354};
 
-  			// Zooming in on Coffman Memorial Union
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: 44.9731, lng: -93.2354},
-          zoom: 15
-        });
+		// Zooming in on Coffman Memorial Union
+    map = new google.maps.Map(document.getElementById('map'), {
+      center: {lat: 44.9731, lng: -93.2354},
+      zoom: 15
+    });
 
-  			//Call maps Marker constructor to place the map at location specified
-  			var markerOne = new google.maps.Marker({
-          position: placeOne,
-          map: map
-        });
+		//Call maps Marker constructor to place the map at location specified
+		var markerOne = new google.maps.Marker({
+      position: placeOne,
+      map: map,
+      title: 'Marker One',
+      label: 'D'
+    });
 
-  			var markerTwo = new google.maps.Marker({
-          position: placeTwo,
-          map: map
-        });
+		var markerTwo = new google.maps.Marker({
+      position: placeTwo,
+      map: map,
+      label: 'D2'
+    });
 
-  			var markerThree = new google.maps.Marker({
-          position: placeThree,
-          map: map
-        });
+		var markerThree = new google.maps.Marker({
+      position: placeThree,
+      map: map,
+      label: 'D3'
+    });
 
-  			var markerFour = new google.maps.Marker({
-          position: placeFour,
-          map: map
-        });
-      }
+		var markerFour = new google.maps.Marker({
+      position: placeFour,
+      map: map,
+      label: 'D4'
+    });
 
+    //OnClick Events that responds to a Click, displays location
+    markerOne.addListener('click', function() {
+      map.setZoom(18);
+      map.setCenter(markerOne.getPosition());
+      //Replace code below to retrieve data and change things
+      // setTimeout(retrieveData(markerOne), 5000)
+      retrieveData(markerOne);
+      });
+    markerTwo.addListener('click', function() {
+      map.setZoom(18);
+      map.setCenter(markerTwo.getPosition());
+      retrieveData(markerTwo);
+      });
+    markerThree.addListener('click', function() {
+      map.setZoom(18);
+      map.setCenter(markerThree.getPosition());
+      retrieveData(markerThree);
+      });
+    markerFour.addListener('click', function() {
+      map.setZoom(18);
+      map.setCenter(markerFour.getPosition());
+      retrieveData(markerFour);
+      });
+  }
+
+//Call this function to retrieve data on click
+function retrieveData(marker){
+  window.alert(marker.label + " position is: " + marker.getPosition());
+}
 // Adds a marker to the map.
 function addMarker(latitude, longitude) {
   // Add the marker at the clicked location, and add the next-available label
