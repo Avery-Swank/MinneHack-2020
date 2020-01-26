@@ -31,7 +31,7 @@ const run = (async () => {
     // Express POST req
     // Process the request. Add a new animal to the MongoDB
     // TODO: NOT TESTED
-    await app.post(`/animal/add`, (req, res, next) => {
+    /*await app.post(`/animal/add`, (req, res, next) => {
 
         const animal = {}
 
@@ -69,7 +69,7 @@ const run = (async () => {
         const animal = await collection.find(id)
          
         await res.send(animal);
-    })
+    })*/
 
     // Create a test collection
     try{
