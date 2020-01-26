@@ -1,5 +1,5 @@
 # MinneHack-2020
-My team's submission for the Minnesota's MinneHack 2019 Hackathon
+My team's submission for the Minnesota's MinneHack 2020 Hackathon
 
 ## Hackathon Prompt
 Develop a solution that fosters social good.
