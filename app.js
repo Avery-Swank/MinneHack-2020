@@ -36,12 +36,13 @@ const run = (async () => {
         const animal = {}
 
         animal.id = req.body.id
-        animal.name = req.body.name
+        animal.petName = req.body.petName
+        animal.ownerFirstName = req.body.ownerFirstName
+        animal.ownerLastName = req.body.ownerLastName
         animal.animalType = req.body.animalType
         animal.animalDescription = req.body.animalDescription
         animal.contact = req.body.contact
         animal.dateLost = req.body.dateLost
-        animal.cityList = req.body.cityList
         animal.latitude = req.body.latitude
         animal.longitude = req.body.longitude
 
