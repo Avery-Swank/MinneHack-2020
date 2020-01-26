@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
   //Function for handling submitting forms
   $("#submit_but").click(function(event){
