@@ -9,6 +9,7 @@ $(document).ready(function(){
     var data2 = {};
     data2['ownerFirstName'] = $('#oFName').val();
     data2['ownerLastName'] = $('#oLName').val();
+    data2['ownerContactNumber'] = $('#oCNumber').val();
     data2['petName'] = $('#pname').val();
     data2['animalType'] = $('#animalType').val();
     data2['animalDescription'] = $('#description').val();
@@ -21,15 +22,16 @@ $(document).ready(function(){
 
 		// Jquery Post
     $.ajax({
-      url: 'http://localhost:3000/', 
-      type: 'POST', 
-      contentType: 'application/json', 
+      url: 'http://localhost:3000/',
+      type: 'POST',
+      contentType: 'application/json',
       data: JSON.stringify(data2)
     })
 
-  });
-
-  //Listener for handling the form submission
-  // const form = document.getElementsByClassName('lost-form')[0];
-  // form.addEventListener('submit', handleFormSubmission);
+    // Empty form and show a 'Successfully Submitted' Prompt
+    document.getElementById("animalForm").reset();
+    var x = document.getElementById("snackbar");
+       x.className = "show";
+       setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+    });
 });
