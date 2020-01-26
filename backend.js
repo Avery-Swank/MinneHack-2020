@@ -55,11 +55,22 @@ const run = (async () => {
         animal.latitude = req.body.latitude
         animal.longitude = req.body.longitude
 
-        console.log(`Post Animal to the database`);
-        console.log(req.body);
+        console.log(`POST Animal to the database`);
+        console.log(animal);
 
         await collection.insertOne(animal)
         console.log(`Added Animal: ${animal.petName} to Collection: ${collectionName}`)
+    });
+
+    // Express Handle for GET all animals in the database.
+    // This is used to populate the Google Maps viewer
+    app.get('/animals', async function(req, res){
+
+        const animals = await collection.find({}).toArray()
+
+        await res.send(animals)
+        console.log(`GET all animals in the database`)
+        console.log(`GET Animal: ${animal.petName} to Collection: ${collectionName}`)
     });
 
     // Add random animal records
