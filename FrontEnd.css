@@ -28,13 +28,10 @@ img.profile {
   padding: 20px;
 }
 
+a {color: rgb(255, 255, 255);} 
 a:link { text-decoration: none;
-         color: rgb(255, 255, 255); }
+         padding-right: 20px; }
 a:hover { color: rgb(247, 0, 255); }
-#nav a {
-  display: inline;
-  padding-right: 10px;
-}
 
 .Title {
   background-color: rgb(214, 214, 214);
@@ -75,4 +72,5 @@ a:hover { color: rgb(247, 0, 255); }
 }
 .Table {
   background-color: lightblue;
+  flex: 100%;
 }
