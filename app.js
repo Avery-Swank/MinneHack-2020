@@ -34,13 +34,13 @@ const run = (async () => {
     // Add random animal records
     for(var i = 0; i < 10; i++){
         const animal = await getRandomAnimal()
-        await collection.insert(animal)
+        await collection.insertOne(animal)
         console.log(`Added animal: ${animal.id} to collection: ${collectionName}`)
     }
 
     // Add a set animal
     const animal = await getRandomAnimal()
-    await collection.insert(animal)
+    await collection.insertOne(animal)
     console.log(`Added set animal: ${animal.id} to collection: ${collectionName}`)
 
     // Remove that animal
