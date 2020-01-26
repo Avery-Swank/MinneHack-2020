@@ -64,10 +64,10 @@ const run = (async () => {
 
         const id = req.params.id;
         //const animal = await collection.find(id)
-         
+
         res.send(`req GET animal: ${id}`);
     })*/
-    
+
 })()
 
 Promise.all([run])
