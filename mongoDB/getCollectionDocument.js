@@ -5,7 +5,7 @@ const { getDatabase } = require(`./getDatabase`)
 
 const MongoClient = require('mongodb')
 
-const createCollection = async (collectionName = ``) => {
+const getCollectionDocument = async (collectionName = ``, idString = ``) => {
     
     const url = await getURL()
     const connectOptions = await getConnectOptions()
@@ -17,13 +17,13 @@ const createCollection = async (collectionName = ``) => {
     const dbName = await getDatabase()
     const db = await client.db(dbName)
 
-    // Create the collection with name 'collectionName'
-    await db.createCollection(collectionName, function(err, res) {
-        if (err) throw err;
-        console.log(`Created Collection: ${collectionName}!`);
-    });
+    // Get the collection
+    const collection = await db.collection(collectionName)
+
+    const document = await collection.find({id: idString})
+    return document
 }
 
 module.exports = {
-    createCollection
+    getCollectionDocument
 }
