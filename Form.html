@@ -12,7 +12,14 @@
         <link rel="stylesheet" type="text/css" href="Form.css"/>
     </head>
     <body>
-        <h3>Contact Form</h3>
+        <div class="Tabs">
+            <nav>
+                <a href = "./FrontEnd.html">Back To Home</a>
+                <a href = "./stories.html">Lost Animal Stories</a>
+                <a href = "./Form.html">Donate</a>
+            </nav>
+        </div>
+        <h3 style="margin-left: 20px">Contact Form</h3>
 
         <div class="container">
         <form>
@@ -27,6 +34,7 @@
 
             <label for="animalType">Animal Type</label>
             <select id="animalType" name="animalType">
+            <option value="default"></option>
             <option value="dog">Dog</option>
             <option value="cat">Cat</option>
             <option value="horse">Horse</option>
