@@ -1,5 +1,6 @@
 var map;
 
+//Creates the map
 function initMap() {
   			var placeOne = {lat: 44.9741, lng: -93.2354};
   			var placeTwo = {lat: 44.9731, lng: -93.2364};
@@ -11,7 +12,8 @@ function initMap() {
           center: {lat: 44.9731, lng: -93.2354},
           zoom: 15
         });
-  
+  			
+  			//Call maps Marker constructor to place the map at location specified
   			var markerOne = new google.maps.Marker({
           position: placeOne, 
           map: map
@@ -32,4 +34,26 @@ function initMap() {
           map: map
         });
       }
+
+// Adds a marker to the map.
+function addMarker(latitude, longitude) {
+  // Add the marker at the clicked location, and add the next-available label
+  // from the array of alphabetical characters.
+  var marker = new google.maps.Marker({
+    position: {lat: latitude, lng: longitude},
+    
+    // LABELS = ID for marker
+    // SWITCH Statements with Dogs and Cats and such, then default labels for others
+    //label: labels[labelIndex++ % labels.length],
+    
+    
+    
+    map: map
+  });
+}
+
+//Remove marker from map
+function removeMarker(marker) {
+  marker.setMap(null);
+}
 
