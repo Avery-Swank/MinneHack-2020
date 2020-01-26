@@ -4,6 +4,22 @@ html, body{
   padding: 0;
 }
 
+table {
+  border-collapse: collapse;
+  width: 50%;
+  margin-left:auto;
+  margin-right:auto;
+}
+table,th,td {
+border: 1px solid black;
+}
+
+img.profile {
+  max-width: 40%;
+  max-height: 50%
+}
+
+
 .Title {
   background-color: blue;
   text-align: center;
@@ -19,8 +35,8 @@ html, body{
 .Map_profile {
   background-color: gold;
   display: flex;
-  height: 480px;
-  
+  height: 580px;
+
 }
 
 .Map {
@@ -31,11 +47,10 @@ html, body{
 .Profile {
   background-color: grey;
   flex: 50%;
+  text-align: center;
+
 }
 
 .Table {
   background-color: lightblue;
 }
-
-
-
