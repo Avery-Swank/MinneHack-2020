@@ -25,6 +25,8 @@ const run = (async () => {
         console.log(`Collection created!`);
     });
 
+
+
     // Add a record to the newly created collection
     const collection = await db.collection("my test collection")
     console.log(collection.collectionName)
