@@ -18,7 +18,7 @@ input[type=text], select, textarea {
 
 table {
   border-collapse: collapse;
-  width: 50%;
+  width: 100%;
   margin-left:auto;
   margin-right:auto;
 }
@@ -28,8 +28,7 @@ border: 1px solid black;
 }
 
 img.profile {
-  max-width: 40%;
-  max-height: 50%
+  max-width: 100%;
 }
 
 .Tabs {
@@ -73,16 +72,17 @@ a:hover { color: rgb(247, 0, 255); }
 }
 
 .Profile {
-  background-color: #33B2FF;
+  background-color: white;
   flex: 35%;
   text-align: center;
 }
 
 .Table_Param {
-  overflow-y: scroll;
   max-height: 250px;
+  width: 100%;
 }
 .Table {
   background-color: lightblue;
   flex: 100%;
+  width: 100%;
 }
