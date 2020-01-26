@@ -1,48 +1,29 @@
-// const express = require('express');
-// const app = express();
-// const bodyParser= require('body-parser')
-// app.use(bodyParser.json());
-// app.use(bodyParser.urlencoded({extended: true}));
+$(document).ready(function(){
+  //Function for handling submitting forms
+  $("#submit_but").click(function(event){
+    //Temporary prevent form from submitting
+    event.preventDefault();
 
-// app.listen(3000, function() {
-//       console.log('listening on 3000');
-//     });
+    //JSON Object for HTTP Requests using Jquery
+    var data2 = {};
+    data2['ownerFirstName'] = $('#oFName').val();
+    data2['ownerLastName'] = $('#oLName').val();
+    data2['petName'] = $('#pname').val();
+    data2['animalType'] = $('#animalType').val();
+    data2['animalDescription'] = $('#description').val();
+    data2['dateLost'] = $('#dLost').val();
+    data2['latitude'] = $('#lat').val();
+    data2['longitude'] = $('#long').val();
 
-
-// app.post('/animal/add', (req, res, next) => {
-
-//         var name = {
-//           first_name: req.body.first_name,
-//           last_name: req.body.last_name
-//         };
-
-//         dbase.collection("name").save(name, (err, result) => {
-//           if(err) {
-//             console.log(err);
-//           }
-
-//           res.send('name added successfully');
-//         });
-//       });
-
-//Function for handling submitting forms
-const handleFormSubmission = event => {
-  //Temporary prevent form from submitting
-  event.preventDefault();
-
-  var data = {};
-  data['name'] = document.getElementsById('fname').value;
-
-  var data2 = {
-    name: document.getElementsById('fname').value
-    lastname: document.getElementsById('lname').value
-   }
-
-  $.post( "test.php", data );
+		//Debugging
+     console.log(data2);
+		//Jquery Post
+    $.post( "http://localhost:3000", data2);
 
 
-};
+  });
 
-//Listener for handling the form submission
-const form = document.getElementsByClassName('lost-form')[0];
-form.addEventListener('submit', handleFormSubmission);
+  //Listener for handling the form submission
+  // const form = document.getElementsByClassName('lost-form')[0];
+  // form.addEventListener('submit', handleFormSubmission);
+});

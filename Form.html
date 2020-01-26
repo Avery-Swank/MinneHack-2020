@@ -7,31 +7,20 @@
         <meta name="keywords" content="HTML,CSS,JavaScript">
         <meta name="author" content="John Doe">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      	<script src="Form.js"></script>
         <link rel="stylesheet" type="text/css" href="Form.css"/>
     </head>
-
     <body>
-
-        <div class="Tabs">
-            <nav>
-              <a href = "./FrontEnd.html">Back to Home</a>
-              <a href = "./stories.html">Lost Animal Stories</a>
-              <a href = "./Form.html">Donate</a>
-            </nav>
-        </div>
-
-        <div class="Title">
-            <h3>Lost Animal Submission</h3>
-        </div>
-
         <h3>Contact Form</h3>
-        <div class="container">
-        <form class = 'lost-form' action="/action_page.php">
-            <label for="fname">First Name</label>
-            <input type="text" id="fname" name="firstname" placeholder="Your name..">
 
-            <label for="lname">Last Name</label>
-            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        <div class="container">
+        <form>
+            <label for="fname">Owner's First Name</label>
+            <input type="text" id="oFName" name="firstname" placeholder="Your name..">
+
+            <label for="lname">Owner's Last Name</label>
+            <input type="text" id="oLName" name="lastname" placeholder="Your last name..">
 
             <label for="pname">Pet Name</label>
             <input type="text" id="pname" name="petname" placeholder="Your pet's name..">
@@ -59,7 +48,7 @@
             <label for="description">Description</label>
             <textarea id="description" name="description" placeholder="Write something.." style="height:200px"></textarea>
 
-            <input type="submit" value="Submit">
+            <input type="submit" id = "submit_but" value="Submit">
         </form>
         </div>
     </body>
