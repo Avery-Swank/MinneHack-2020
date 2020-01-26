@@ -1,3 +1,5 @@
+const { getRandomAnimal } = require(`./animalData/getRandomAnimal`)
+
 
 const MongoClient = require('mongodb').MongoClient;
 
@@ -25,13 +27,14 @@ const run = (async () => {
         console.log(`Collection created!`);
     });
 
-
-
-    // Add a record to the newly created collection
     const collection = await db.collection("my test collection")
-    console.log(collection.collectionName)
-    
-    collection.insertOne({id: "123"})
+
+    // Add random animal records
+    for(var i = 0; i < 10; i++){
+        const animal = await getRandomAnimal()
+        await  collection.insertOne(animal)
+        console.log(`Added animal: ${animal.id} to the database`)
+    }
     
 })()
 
