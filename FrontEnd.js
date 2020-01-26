@@ -18,6 +18,7 @@ function addMarker(latitude, longitude) {
 		label: 'Test',
     map: map
   });
+  console.log(latitude)
 }
 
 //Remove marker from map
@@ -58,18 +59,13 @@ function initMap() {
 			datatype: 'json',
 			success: function(data) {
             console.log(data);
-            alert(data);
+            // alert(JSON.stringify(data));
 						console.log(data);
         		for(var i = 0; i < data.length; i++) {
-              const lat = dataIteration.latitude;
-              const lon = dataIteration.longitude;
+              const lat = parseFloat(data[i].latitude);
+              const lon = parseFloat(data[i].longitude);
               const marker = addMarker(lat, lon);
             }
-//         		parsedData = JSON.parse(data);
-//         		var lat = parsedData['latitude'];
-//         		var long = parsedData['longitude'];
-
-//         		var test = addMarker(lat, long)
         }
 		})
 

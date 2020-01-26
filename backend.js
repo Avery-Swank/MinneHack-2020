@@ -31,7 +31,7 @@ const run = (async () => {
     // Get the MongoDB animals database and collection
     const db = await client.db(dbName)
     const collection = await db.collection(collectionName)
-    
+
 
     // Create the animals collection
     try{
@@ -86,7 +86,6 @@ const run = (async () => {
 
         await res.send(animals)
         console.log(`GET all animals in the database`)
-        console.log(`GET Animal: ${animal.petName} to Collection: ${collectionName}`)
     });
 
     // Add random animal records
@@ -114,7 +113,7 @@ const run = (async () => {
 
     // Close the client (may have to delete later)
     await client.close()*/
-    
+
 })()
 
 Promise.all([run])
