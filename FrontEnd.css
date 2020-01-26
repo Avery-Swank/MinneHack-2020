@@ -5,6 +5,17 @@ html, body{
   padding: 0;
 }
 
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  resize: vertical;
+}
+
 table {
   border-collapse: collapse;
   width: 50%;
@@ -35,9 +46,9 @@ a:link { text-decoration: none;
 a:hover { color: rgb(247, 0, 255); }
 
 .Title {
-  background-color: rgb(214, 214, 214);
+  background-color: #4CAF50;
   text-align: left;
-  color: rgb(56, 56, 56);
+  color: white;
   font-size: 20px;
   padding: 20px;
 }
