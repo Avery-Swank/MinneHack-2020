@@ -48,9 +48,9 @@ const run = (async () => {
         animal.petName = req.body.petName
         animal.ownerFirstName = req.body.ownerFirstName
         animal.ownerLastName = req.body.ownerLastName
+        animal.contact = req.body.ownerContactNumber
         animal.animalType = req.body.animalType
         animal.animalDescription = req.body.animalDescription
-        animal.contact = req.body.contact
         animal.dateLost = req.body.dateLost
         animal.latitude = req.body.latitude
         animal.longitude = req.body.longitude
