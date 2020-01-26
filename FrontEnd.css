@@ -1,25 +1,34 @@
 .Title {
-    background-color: red;
-  }
+  background-color: blue;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  padding: 40px;
+}
+
+.SearchBar {
+  background-color: white;
+}
+
+.Map_profile {
+  background-color: gold;
+  display: flex;
+  height: 480px;
   
-  .SearchBar {
-    background-color: white;
-  }
-  
-  .Map_profile {
-    background-color: gold;
-  }
-  
-  .Map {
-    background-color: maroon;
-  }
-  
-  .Profile {
-    background-color: grey;
-  }
-  
-  .Table {
-    background-color: blue;
-  }
-  
-  
+}
+
+.Map {
+  background-color: maroon;
+  flex: 50%;
+}
+
+.Profile {
+  background-color: grey;
+  flex: 50%;
+}
+
+.Table {
+  background-color: lightblue;
+}
+
+
