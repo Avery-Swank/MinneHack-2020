@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Form</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Home Screen">
+        <meta name="keywords" content="HTML,CSS,JavaScript">
+        <meta name="author" content="John Doe">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="Form.css"/>
+    </head>
+    <body>
+        <h3>Contact Form</h3>
+
+        <div class="container">
+        <form action="/action_page.php">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+            <label for="animalType">Animal Type</label>
+            <select id="animalType" name="animalType">
+            <option value="dog">Dog</option>
+            <option value="cat">Cat</option>
+            <option value="horse">Horse</option>
+            <option value="cow">Cow</option>
+            <option value="fish">Fish</option>
+            <option value="snake">Snake</option>
+            <option value="monkey">Monkey</option>
+            </select>
+
+            <label for="dLost">Date Lost</label>
+            <input type="text" id="dLost" name="dLost" placeholder="The day you lost your pet..">
+
+            <label for="latitude">Latitude</label>
+            <input type="text" id="lat" name="latitude" placeholder="Latitude coordinate you lost your pet..">
+
+            <label for="longitude">Longitude</label>
+            <input type="text" id="long" name="longitude" placeholder="Longitude coordinate you lost your pet..">
+
+            <label for="description">Description</label>
+            <textarea id="description" name="description" placeholder="Write something.." style="height:200px"></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+        </div>
+    </body>
+</html>
