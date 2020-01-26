@@ -31,6 +31,7 @@ const run = (async () => {
     // Get the MongoDB animals database and collection
     const db = await client.db(dbName)
     const collection = await db.collection(collectionName)
+    
 
     // Create the animals collection
     try{
@@ -39,6 +40,21 @@ const run = (async () => {
             console.log(`Created collection: ${collectionName}`);
         });
     } catch (e) {/* Collection already exists */}
+
+
+    // Clear the Collection
+    const animals = await collection.find({}).toArray()
+    for(const animal of animals){
+        await collection.deleteOne(animal)
+    }
+    console.log(`Deleted All Records in collection: ${collectionName}`)
+
+    // Populate Collection with random animals
+    for(var i = 0; i < 10; i++){
+        const animal = await getRandomAnimal()
+        await collection.insertOne(animal)
+        console.log(`Added Random Animal: ${animal.id} to collection: ${collectionName}`)
+    }
 
     // Express Handle for the `Add Lost Animal` form POST requests
     app.post('/', async function(req, res){
