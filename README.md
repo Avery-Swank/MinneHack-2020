@@ -4,6 +4,11 @@ My team's submission for the Minnesota's MinneHack 2019 Hackathon
 ## Hackathon Prompt
 Develop a solution that fosters social good.
 
+## How To Execute
+Everything on this project is run locally. Because of time constraints we were unable to deploy our application. However, we were able to get everything running locally on one system that has all of the source code. This is how to start the application:
+1. Run `node backend.js`
+2. Open `FrontEnd.html`
+
 ## Summary
 When reading this topic we found that an application that fosters social good could apply to just about anything. Whether it was an application that beneifts a single person or a group of people, all of which foster social good. We initially had ideas based around donating to volunteer organizations, charities, and fundraisers with a financial model like Acorns that rounds up change to donate. We also had the idea to be business facing surveying applications where employees trade reliable survey information to their company in exchange the company donates in some fashion.
 
@@ -24,5 +29,5 @@ Our MongoDB was setup with a free trial account for the weekend and we used Node
 
 The last of this came down to testing. To get a good understand of the scale of how this application could be used. We created a set of getRandom() functions that create random lost pet instances that vary in types, dates, descriptions and more. We can execute this at scale so we can easily populate our database with reliable information for demonstrations and testing purposes. We used this a lot for testing our backend CRUD operations.
 
-### Software + Technologies Used
+## Software + Technologies Used
 HTML, CSS, Javascript, NodeJS, MongoDB, Express, VS Code, Postman 
