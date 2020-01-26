@@ -27,8 +27,11 @@ $(document).ready(function(){
       contentType: 'application/json', 
       data: JSON.stringify(data2)
     })
-
-  });
+    document.getElementById("animalForm").reset();
+    var x = document.getElementById("snackbar");
+       x.className = "show";
+       setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+      });
 
   //Listener for handling the form submission
   // const form = document.getElementsByClassName('lost-form')[0];
