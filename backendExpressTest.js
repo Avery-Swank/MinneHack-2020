@@ -1,5 +1,6 @@
 
 const express = require('express')
+const cors = require('cors')
 const app = express()
 const bodyParser = require('body-parser').json()
 
@@ -7,7 +8,10 @@ const run = (async () => {
 
     const serverPort = 3000
 
-    app.listen(serverPort, function() {
+    app.use(bodyParser);
+    app.use(cors())
+
+    app.listen(serverPort, function(req, res) {
         console.log(`Listening on server port: ${serverPort}`);
     });
 
@@ -16,9 +20,27 @@ const run = (async () => {
         res.send("Yep it's working");
     });
 
+    app.post('/', function(req, res){
+
+        const animal = {}
+
+        animal.id = "123"
+        animal.petName = req.body.petName
+        animal.ownerFirstName = req.body.ownerFirstName
+        animal.ownerLastName = req.body.ownerLastName
+        animal.animalType = req.body.animalType
+        animal.animalDescription = req.body.animalDescription
+        animal.contact = req.body.contact
+        animal.dateLost = req.body.dateLost
+        animal.latitude = req.body.latitude
+        animal.longitude = req.body.longitude
+
+        console.log(req.body);
+    });
+
     // Express POST req
     // Process the request. Add a new animal to the MongoDB
-    app.post(`/animal/add`, bodyParser, (req, res, next) => {
+    /*app.post(`/animal/add`, bodyParser, (req, res, next) => {
 
         const animal = {}
 
@@ -44,7 +66,7 @@ const run = (async () => {
         //const animal = await collection.find(id)
          
         res.send(`req GET animal: ${id}`);
-    })
+    })*/
     
 })()
 

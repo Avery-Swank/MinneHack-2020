@@ -15,11 +15,16 @@ $(document).ready(function(){
     data2['latitude'] = $('#lat').val();
     data2['longitude'] = $('#long').val();
 
-		//Debugging
-     console.log(data2);
-		//Jquery Post
-    $.post( "http://localhost:3000", data2);
+		// Debugging
+    console.log(data2);
 
+		// Jquery Post
+    $.ajax({
+      url: 'http://localhost:3000/', 
+      type: 'POST', 
+      contentType: 'application/json', 
+      data: JSON.stringify(data2)
+    })
 
   });
 
