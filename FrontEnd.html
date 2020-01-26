@@ -9,10 +9,20 @@
         <meta name="author" content="John Doe">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="FrontEnd.css"/>
-    </head>
+  </head>
+
   <body>
+
+    <div class="Tabs">
+      <nav> 
+        <a href = "./Form.html">Add a Lost Animal</a>
+        <a href = "./Form.html">Lost Animal Stories</a>
+        <a href = "./Form.html">Donate</a>
+      </nav>
+    </div>
+
     <div class="Title">
-      <h1> Pet Alert, I'm Falling and I Can't Find My Pet! </h1>
+      <h3> Pet Alert, I'm Falling and I Can't Find My Pet! </h3>
     </div>
 
     <div class="SearchBar">
@@ -20,14 +30,7 @@
     </div>
     <!-- Container to allow for 2 columns -->
     <div class="Map_profile">
-      <!-- Section for Displaying the Map with Markers -->
-      <div class="Map" id = "map">
-        <h1> Map </h1>
-        <script src="FrontEnd.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJ7EFBoQnWV6lpZPYktQU4dJaOry7wSZM
-&callback=initMap"
-    async defer></script>
-      </div>
+
       <!-- Profile Section to display the pet's name and profile description-->
       <div class="Profile">
         <h1> Pet's Name </h1>
@@ -55,7 +58,16 @@
           </table>
         </div>
       </div>
+
+      <!-- Section for Displaying the Map with Markers -->
+      <div class="Map" id = "map">
+        <h1> Map </h1>
+        <script src="FrontEnd.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJ7EFBoQnWV6lpZPYktQU4dJaOry7wSZM&callback=initMap" async defer></script>
+      </div>
+
     </div>
+
     <!-- Maybe implement this section to display all the lost pets in a table -->
     <div class="Table">
       <h1> Table </h1>

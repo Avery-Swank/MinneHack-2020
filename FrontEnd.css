@@ -10,6 +10,7 @@ table {
   margin-left:auto;
   margin-right:auto;
 }
+
 table,th,td {
 border: 1px solid black;
 }
@@ -19,38 +20,53 @@ img.profile {
   max-height: 50%
 }
 
+.Tabs {
+  background-color: rgb(128, 18, 172);
+  text-align: left;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  padding: 20px;
+}
+
+a:link { text-decoration: none;
+         color: rgb(255, 255, 255); }
+a:hover { color: rgb(247, 0, 255); }
+#nav a {
+  display: inline;
+  padding-right: 10px;
+}
 
 .Title {
-  background-color: #33B2FF;
-  text-align: center;
-  color: white;
+  background-color: rgb(214, 214, 214);
+  text-align: left;
+  color: rgb(56, 56, 56);
   font-size: 20px;
-  padding: 30px;
+  padding: 20px;
 }
 
 .SearchBar {
-  background-color: black;
-  text-align: center;
-  color: white;
+  background-color: rgb(255, 255, 255);
+  text-align: left;
+  color: rgb(110, 110, 110);
+  flex: 50%;
+  border: 2px solid black;
 }
 
 .Map_profile {
   background-color: gold;
   display: flex;
   height: 580px;
-
 }
 
 .Map {
   background-color: maroon;
-  flex: 50%;
+  flex: 65%;
 }
 
 .Profile {
   background-color: #33B2FF;
-  flex: 50%;
+  flex: 35%;
   text-align: center;
-
 }
 
 .Table_Param {
