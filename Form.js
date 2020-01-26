@@ -8,6 +8,7 @@ $(document).ready(function(){
     var data2 = {};
     data2['ownerFirstName'] = $('#oFName').val();
     data2['ownerLastName'] = $('#oLName').val();
+    data2['ownerContactNumber'] = $('#oCNumber').val();
     data2['petName'] = $('#pname').val();
     data2['animalType'] = $('#animalType').val();
     data2['animalDescription'] = $('#description').val();
